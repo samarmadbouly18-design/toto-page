@@ -4,20 +4,77 @@
 <style>
 body {
     background-color: black;
+    /* Center all content on the page */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures content is centered vertically in the viewport */
+    margin: 0;
+    overflow: hidden; /* Hide hearts that fly off screen */
 }
+
+/* Style for the main text */
 a {
     color: pink;
     text-decoration: none;
-    font-size: 24px;
-    display: block;
+    font-size: 36px; /* Slightly larger text */
+    font-family: Arial, sans-serif;
     text-align: center;
-    margin-top: 50px;
+    padding: 20px;
+    z-index: 10; /* Ensures text is on top of the hearts */
+    animation: pulse 1.5s infinite alternate; /* Apply the pulsing animation */
+}
+
+/* Keyframes for the pulsing text animation */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    to {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+}
+
+/* Styling for the heart elements */
+.heart {
+    position: absolute;
+    color: red; /* Color of the hearts */
+    font-size: 20px; /* Size of the hearts */
+    user-select: none;
+    pointer-events: none;
+    animation: floatUp 4s ease-out infinite; /* Apply the floating animation */
+    opacity: 0;
+}
+
+/* Keyframes for the floating heart animation */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-500px) scale(1.5); /* Hearts float up 500px */
+        opacity: 0;
+    }
 }
 </style>
 </head>
 <body>
 
 <a href="#">toto is the nicest girl ive ever met</a>
+
+<div class="heart" style="left: 10%; bottom: 0; animation-delay: 0s;">💖</div>
+<div class="heart" style="left: 25%; bottom: -50px; animation-delay: 1.5s;">❤️</div>
+<div class="heart" style="left: 50%; bottom: 0; animation-delay: 3s;">💖</div>
+<div class="heart" style="left: 70%; bottom: -20px; animation-delay: 0.5s;">❤️</div>
+<div class="heart" style="left: 90%; bottom: -100px; animation-delay: 2.5s;">💖</div>
+<div class="heart" style="left: 40%; bottom: 0; animation-delay: 4s;">❤️</div>
 
 </body>
 </html>
