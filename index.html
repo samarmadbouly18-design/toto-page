@@ -6,30 +6,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
-    background-color: #000; /* Black background */
+    background-color: #000; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
-/* 2. Style for the main text - using the new font and color */
+/* 2. Style for the main text */
 a {
     color: #FF69B4; /* Deep Pink */
     text-decoration: none;
-    font-size: 48px; /* Bigger text */
-    font-family: 'Pacifico', cursive; /* Applied the suggested font */
+    font-size: 48px; 
+    font-family: 'Pacifico', cursive; 
     text-align: center;
     padding: 20px;
     z-index: 10;
     animation: pulse 1.5s infinite alternate;
-    line-height: 1.5; /* Spacing for the longer text */
+    line-height: 1.5; 
 }
 
-/* Keyframes for the pulsing text animation (no change) */
+/* Keyframes for the pulsing text animation */
 @keyframes pulse {
     from {
         transform: scale(1);
@@ -41,29 +41,29 @@ a {
     }
 }
 
-/* 3. Styling for the heart elements - added more colors */
+/* 3. Styling for the heart elements */
 .heart {
     position: absolute;
-    font-size: 24px; /* Slightly larger hearts */
+    font-size: 24px; 
     user-select: none;
     pointer-events: none;
-    animation: floatUp 4s linear infinite; /* Changed to linear for smoother floating */
+    animation: floatUp 6s linear infinite;
     opacity: 0;
-    left: 50%; /* Start them all near the center */
-    transform: translateX(-50%);
+    bottom: -100px;
+    left: calc(var(--i) * 5vw); 
 }
 
-/* Keyframes for the floating heart animation (faster and higher) */
+/* Keyframes for the floating heart animation */
 @keyframes floatUp {
     0% {
-        transform: translateY(0) scale(0.5) translateX(-50%);
+        transform: translateY(0) scale(0.5); 
         opacity: 0;
     }
     25% {
         opacity: 0.9;
     }
     100% {
-        transform: translateY(-800px) scale(1.5) translateX(-50%); /* Float higher */
+        transform: translateY(-1000px) scale(2); 
         opacity: 0;
     }
 }
@@ -71,16 +71,26 @@ a {
 </head>
 <body>
 
+<audio controls autoplay loop>
+    <source src="*** PASTE YOUR MP3 URL HERE ***" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+
 <a href="#">You make me happy when im sad or mad and i really like it about you Jannat</a>
 
-<div class="heart" style="color: #FF1493; left: 10%; animation-delay: 0s;">💖</div>
-<div class="heart" style="color: #FF00FF; left: 25%; animation-delay: 1s;">❤️</div>
-<div class="heart" style="color: #FF69B4; left: 40%; animation-delay: 2s;">💕</div>
-<div class="heart" style="color: #C71585; left: 55%; animation-delay: 3s;">💗</div>
-<div class="heart" style="color: #DB7093; left: 70%; animation-delay: 4s;">❤️</div>
-<div class="heart" style="color: #FFC0CB; left: 85%; animation-delay: 5s;">💖</div>
-<div class="heart" style="color: #FF00FF; left: 30%; animation-delay: 6s;">💕</div>
-<div class="heart" style="color: #FF1493; left: 65%; animation-delay: 7s;">💗</div>
+<div class="heart" style="color: #FF1493; left: 10%; animation-delay: 0s; --i: 1;">💖</div>
+<div class="heart" style="color: #FF00FF; left: 25%; animation-delay: 1s; --i: 5;">❤️</div>
+<div class="heart" style="color: #FF69B4; left: 40%; animation-delay: 2s; --i: 10;">💕</div>
+<div class="heart" style="color: #C71585; left: 55%; animation-delay: 3s; --i: 15;">💗</div>
+<div class="heart" style="color: #DB7093; left: 70%; animation-delay: 4s; --i: 20;">❤️</div>
+<div class="heart" style="color: #FFC0CB; left: 85%; animation-delay: 5s; --i: 2;">💖</div>
+<div class="heart" style="color: #FF00FF; left: 30%; animation-delay: 6s; --i: 7;">💕</div>
+<div class="heart" style="color: #FF1493; left: 65%; animation-delay: 7s; --i: 12;">💗</div>
+<div class="heart" style="color: #FF69B4; left: 15%; animation-delay: 0.5s; --i: 4;">❤️</div>
+<div class="heart" style="color: #C71585; left: 5%; animation-delay: 2.5s; --i: 9;">💖</div>
+<div class="heart" style="color: #DB7093; left: 75%; animation-delay: 4.5s; --i: 14;">💕</div>
+<div class="heart" style="color: #FFC0CB; left: 95%; animation-delay: 6.5s; --i: 18;">💗</div>
 
 </body>
 </html>
