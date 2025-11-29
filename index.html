@@ -17,7 +17,7 @@ body {
 }
 
 /* 2. Style for the main text */
-a {
+#main-message { 
     color: #FF69B4; /* Deep Pink */
     text-decoration: none;
     font-size: 48px; 
@@ -27,6 +27,17 @@ a {
     z-index: 10;
     animation: pulse 1.5s infinite alternate;
     line-height: 1.5; 
+    display: block; 
+}
+
+/* Style for the Lemon Fact text */
+#lemon-fact {
+    color: #F8DE7E; /* Pale Yellow, to match lemons */
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+    text-align: center;
+    z-index: 10;
 }
 
 /* Keyframes for the pulsing text animation */
@@ -41,7 +52,7 @@ a {
     }
 }
 
-/* 3. Styling for the heart elements */
+/* 3. Styling for the heart/lemon elements */
 .heart {
     position: absolute;
     font-size: 24px; 
@@ -77,18 +88,23 @@ a {
 </audio>
 
 
-<a href="#">You make me happy when im sad or mad and i really like it about you Jannat</a>
+<a href="#" id="main-message">You make me happy when im sad or mad and i really like it about you Jannat</a>
+
+<div id="lemon-fact">
+    🍋 Fun Fact: Did you know lemons contain more sugar than strawberries? 🍓
+</div>
+
 
 <div class="heart" style="color: #FF1493; left: 10%; animation-delay: 0s; --i: 1;">💖</div>
-<div class="heart" style="color: #FF00FF; left: 25%; animation-delay: 1s; --i: 5;">❤️</div>
+<div class="heart" style="color: #FFFF00; left: 25%; animation-delay: 1s; --i: 5;">🍋</div> 
 <div class="heart" style="color: #FF69B4; left: 40%; animation-delay: 2s; --i: 10;">💕</div>
-<div class="heart" style="color: #C71585; left: 55%; animation-delay: 3s; --i: 15;">💗</div>
+<div class="heart" style="color: #FFFF00; left: 55%; animation-delay: 3s; --i: 15;">🍋</div> 
 <div class="heart" style="color: #DB7093; left: 70%; animation-delay: 4s; --i: 20;">❤️</div>
-<div class="heart" style="color: #FFC0CB; left: 85%; animation-delay: 5s; --i: 2;">💖</div>
+<div class="heart" style="color: #FFFF00; left: 85%; animation-delay: 5s; --i: 2;">🍋</div> 
 <div class="heart" style="color: #FF00FF; left: 30%; animation-delay: 6s; --i: 7;">💕</div>
-<div class="heart" style="color: #FF1493; left: 65%; animation-delay: 7s; --i: 12;">💗</div>
+<div class="heart" style="color: #FFFF00; left: 65%; animation-delay: 7s; --i: 12;">💛</div> 
 <div class="heart" style="color: #FF69B4; left: 15%; animation-delay: 0.5s; --i: 4;">❤️</div>
-<div class="heart" style="color: #C71585; left: 5%; animation-delay: 2.5s; --i: 9;">💖</div>
+<div class="heart" style="color: #FFFF00; left: 5%; animation-delay: 2.5s; --i: 9;">🍋</div> 
 <div class="heart" style="color: #DB7093; left: 75%; animation-delay: 4.5s; --i: 14;">💕</div>
 <div class="heart" style="color: #FFC0CB; left: 95%; animation-delay: 6.5s; --i: 18;">💗</div>
 
