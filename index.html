@@ -2,31 +2,34 @@
 <html>
 <head>
 <style>
+/* 1. Import the new font (Pacifico) */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 body {
-    background-color: black;
-    /* Center all content on the page */
+    background-color: #000; /* Black background */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensures content is centered vertically in the viewport */
+    min-height: 100vh;
     margin: 0;
-    overflow: hidden; /* Hide hearts that fly off screen */
+    overflow: hidden;
 }
 
-/* Style for the main text */
+/* 2. Style for the main text - using the new font and color */
 a {
-    color: pink;
+    color: #FF69B4; /* Deep Pink */
     text-decoration: none;
-    font-size: 36px; /* Slightly larger text */
-    font-family: Arial, sans-serif;
+    font-size: 48px; /* Bigger text */
+    font-family: 'Pacifico', cursive; /* Applied the suggested font */
     text-align: center;
     padding: 20px;
-    z-index: 10; /* Ensures text is on top of the hearts */
-    animation: pulse 1.5s infinite alternate; /* Apply the pulsing animation */
+    z-index: 10;
+    animation: pulse 1.5s infinite alternate;
+    line-height: 1.5; /* Spacing for the longer text */
 }
 
-/* Keyframes for the pulsing text animation */
+/* Keyframes for the pulsing text animation (no change) */
 @keyframes pulse {
     from {
         transform: scale(1);
@@ -38,28 +41,29 @@ a {
     }
 }
 
-/* Styling for the heart elements */
+/* 3. Styling for the heart elements - added more colors */
 .heart {
     position: absolute;
-    color: red; /* Color of the hearts */
-    font-size: 20px; /* Size of the hearts */
+    font-size: 24px; /* Slightly larger hearts */
     user-select: none;
     pointer-events: none;
-    animation: floatUp 4s ease-out infinite; /* Apply the floating animation */
+    animation: floatUp 4s linear infinite; /* Changed to linear for smoother floating */
     opacity: 0;
+    left: 50%; /* Start them all near the center */
+    transform: translateX(-50%);
 }
 
-/* Keyframes for the floating heart animation */
+/* Keyframes for the floating heart animation (faster and higher) */
 @keyframes floatUp {
     0% {
-        transform: translateY(0) scale(0.5);
+        transform: translateY(0) scale(0.5) translateX(-50%);
         opacity: 0;
     }
     25% {
-        opacity: 0.8;
+        opacity: 0.9;
     }
     100% {
-        transform: translateY(-500px) scale(1.5); /* Hearts float up 500px */
+        transform: translateY(-800px) scale(1.5) translateX(-50%); /* Float higher */
         opacity: 0;
     }
 }
@@ -67,14 +71,16 @@ a {
 </head>
 <body>
 
-<a href="#">toto is the nicest girl ive ever met</a>
+<a href="#">You make me happy when im sad or mad and i really like it about you Jannat</a>
 
-<div class="heart" style="left: 10%; bottom: 0; animation-delay: 0s;">💖</div>
-<div class="heart" style="left: 25%; bottom: -50px; animation-delay: 1.5s;">❤️</div>
-<div class="heart" style="left: 50%; bottom: 0; animation-delay: 3s;">💖</div>
-<div class="heart" style="left: 70%; bottom: -20px; animation-delay: 0.5s;">❤️</div>
-<div class="heart" style="left: 90%; bottom: -100px; animation-delay: 2.5s;">💖</div>
-<div class="heart" style="left: 40%; bottom: 0; animation-delay: 4s;">❤️</div>
+<div class="heart" style="color: #FF1493; left: 10%; animation-delay: 0s;">💖</div>
+<div class="heart" style="color: #FF00FF; left: 25%; animation-delay: 1s;">❤️</div>
+<div class="heart" style="color: #FF69B4; left: 40%; animation-delay: 2s;">💕</div>
+<div class="heart" style="color: #C71585; left: 55%; animation-delay: 3s;">💗</div>
+<div class="heart" style="color: #DB7093; left: 70%; animation-delay: 4s;">❤️</div>
+<div class="heart" style="color: #FFC0CB; left: 85%; animation-delay: 5s;">💖</div>
+<div class="heart" style="color: #FF00FF; left: 30%; animation-delay: 6s;">💕</div>
+<div class="heart" style="color: #FF1493; left: 65%; animation-delay: 7s;">💗</div>
 
 </body>
 </html>
