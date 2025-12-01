@@ -47,9 +47,18 @@ body {
     font-size: 16px;
     font-family: Arial, sans-serif;
     margin-top: 15px;
+    margin-bottom: 5px; /* Add space above players */
     text-align: center;
     z-index: 10;
     line-height: 1.6;
+}
+
+/* Style for the individual audio player labels */
+.audio-label {
+    color: #FFC0CB;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin-top: 15px;
 }
 
 /* Keyframes for the pulsing text animation */
@@ -94,13 +103,6 @@ body {
 </head>
 <body>
 
-<audio controls autoplay loop>
-    <source src="BIRDS OF A FEATHER - Billie Eilish.mp3" type="audio/mpeg">
-    <source src="ssstik.io_1764607674242.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-
-
 <a href="#" id="main-message">QUOTE OF THE DAY: FRIENDSHIP IS THE ONLY CURE FOR HATRED</a>
 
 <div id="lemon-fact">
@@ -108,9 +110,20 @@ body {
 </div>
 
 <div id="song-info">
-    **Omar's Fav Song:** Smoke it off super slowed + reverb<br>
-    **Jannat's Fav Song:** Birds of a Feather
+    **Your Fav Song** & **Jannat's Fav Song**
 </div>
+
+<div class="audio-label">Jannat's Song: Birds of a Feather</div>
+<audio controls autoplay loop>
+    <source src="BIRDS OF A FEATHER - Billie Eilish.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<div class="audio-label">Omar's Song: Smoke it off super slowed + reverb</div>
+<audio controls loop>
+    <source src="ssstik.io_1764607674242.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 
 
 <div class="heart" style="color: #FF1493; left: 10%; animation-delay: 0s; --i: 1;">💖</div>
@@ -128,4 +141,3 @@ body {
 
 </body>
 </html>
-
