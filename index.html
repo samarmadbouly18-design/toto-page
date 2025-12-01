@@ -17,7 +17,7 @@ body {
     /* Scrollable */
 }
 
-/* 2. Style for the main text */
+/* 2. Style for the main text (Quote) */
 #main-message { 
     color: #FF69B4; /* Deep Pink */
     text-decoration: none;
@@ -39,6 +39,17 @@ body {
     margin-top: 10px;
     text-align: center;
     z-index: 10;
+}
+
+/* Style for the Song Info */
+#song-info {
+    color: #FFC0CB; /* Lighter Pink */
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    margin-top: 15px;
+    text-align: center;
+    z-index: 10;
+    line-height: 1.6;
 }
 
 /* Keyframes for the pulsing text animation */
@@ -84,15 +95,21 @@ body {
 <body>
 
 <audio controls autoplay loop>
+    <source src="ssstik.io_1764607674242.mp3" type="audio/mpeg">
     <source src="BIRDS OF A FEATHER - Billie Eilish.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
 
 
-<a href="#" id="main-message">quote of the day "LEMONS ARE FRUIT NOT VEGETABLES"</a>
+<a href="#" id="main-message">quote of the day LEMONS ARE FRUIT NOT VEGETABLES</a>
 
 <div id="lemon-fact">
     🍋 Fun Fact: Did you know lemons contain more sugar than strawberries? 🍓
+</div>
+
+<div id="song-info">
+    **Your Fav Song:** Smoke it off super slowed + reverb<br>
+    **Jannat's Fav Song:** Birds of a Feather
 </div>
 
 
@@ -111,4 +128,3 @@ body {
 
 </body>
 </html>
-
